@@ -13,10 +13,10 @@
 # <swiftbar.hideDisablePlugin>true</swiftbar.hideDisablePlugin>
 # <swiftbar.hideSwiftBar>false</swiftbar.hideSwiftBar>
 
-property meetBtnTitle : "Reunião"
-property muteBtnTitle : "Desativar Áudio"
-property videoBtnTitle : "Interromper Vídeo"
-property shareBtnTitle : "Interromper Compartilhamento"
+property meetBtnTitle : "Meeting"
+property muteBtnTitle : "Mute audio"
+property videoBtnTitle : "Stop Video"
+property shareBtnTitle : "Start Share"
 
 set muteState to ""
 set videoState to ""
@@ -25,7 +25,7 @@ set shareState to ""
 if application "zoom.us" is running then
 	tell application "System Events"
 		tell application process "zoom.us"
-			if exists (menu bar item "Reunião" of menu bar 1) then
+			if exists (menu bar item meetBtnTitle of menu bar 1) then
 				if exists (menu item MuteBtnTitle of menu 1 of menu bar item meetBtnTitle of menu bar 1) then
 					set muteState to "🎤"
 				end if
