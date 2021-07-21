@@ -12,10 +12,10 @@ You can choose one from supported languages, based on which language do you use 
 brew install swiftbar
 ```
 
-- Download decired version of Zoom-State
+- Download desired version of Zoom-State
 
 ```
-curl https://raw.githubusercontent.com/ericvinicius/State-Zoom/main/ --output zoom-state.1s.scpt
+curl https://raw.githubusercontent.com/ericvinicius/State-Zoom/main/<language>/zoom-state.1s.scpt --output <swiftbar-plugin-folder>/zoom-state.1s.scpt
 ```
 
 ## Configuration
