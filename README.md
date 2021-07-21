@@ -1,3 +1,6 @@
+![Example Image](/src/img.jpeg)
+
+
 # State-Zoom
 
 A simple plugin to [SwiftBar](https://github.com/swiftbar/SwiftBar) that show if you are mutted, with camera on or sharing screen on zoom!
