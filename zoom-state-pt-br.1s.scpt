@@ -16,45 +16,32 @@
 property meetBtnTitle : "Reunião"
 property muteBtnTitle : "Desativar Áudio"
 property videoBtnTitle : "Interromper Vídeo"
-property shareBtnTitle : "Iniciar Compartilhamento"
+property shareBtnTitle : "Interromper Compartilhamento"
 
 set muteState to ""
 set videoState to ""
 set shareState to ""
-set pad1 to ""
-set pad2 to ""
 
 if application "zoom.us" is running then
 	tell application "System Events"
 		tell application process "zoom.us"
 			if exists (menu bar item "Reunião" of menu bar 1) then
-				
 				if exists (menu item MuteBtnTitle of menu 1 of menu bar item meetBtnTitle of menu bar 1) then
-					set muteState to "LIVE MIC"
-				else
-					set muteState to "MUTED"
+					set muteState to "🎤"
 				end if
 				
 				if exists (menu item videoBtnTitle of menu 1 of menu bar item meetBtnTitle of menu bar 1) then
-					set videoState to "VIDEO ACTIVE"
-					set pad1 to "     "
-				else
-					set videoState to "NO VIDEO"
-					set pad1 to "     "
+					set videoState to "🎥"
 				end if
 				
 				if exists (menu item shareBtnTitle of menu 1 of menu bar item meetBtnTitle of menu bar 1) then
-					set shareState to ""
-					set pad2 to ""
-				else
-					set shareState to "SCREEN SHARE ACTIVE"
-					set pad2 to "   "
+					set shareState to "🖥️"
 				end if
 			end if
 		end tell
 	end tell
 end if
 
-return shareState & pad2 & videoState & pad1 & muteState & "| size=18
+return shareState & videoState & muteState & "| size=18
 ---
 State for Zoom"
